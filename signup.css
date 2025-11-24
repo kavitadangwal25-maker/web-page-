@@ -1,0 +1,170 @@
+:root{
+  --green:#0b6e3c;
+  --bg-soft:#f4f8f4;
+  --card-bg:rgba(255,255,255,0.93);
+  --accent:#0a4d2f;
+  --shadow:0 6px 20px rgba(0,0,0,0.1);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",Arial,sans-serif;}
+
+html,body{
+  height:100%;
+  background:linear-gradient(180deg,#eef8ef,#dff4e2);
+  color:#222;
+}
+
+
+
+
+
+
+.header{
+  position:fixed;
+  top:0; left:0;
+  width:100%;
+  height:65px;
+  background:var(--green);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 25px;
+  z-index:1000;
+  box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+.logo{
+  font-size:20px;
+  font-weight:600;
+}
+
+.navbar{
+  display:flex;
+  gap:15px;
+  font-size:15px;
+}
+
+.navbar a{
+  color:white;
+  text-decoration:none;
+  padding:8px 10px;
+  border-radius:6px;
+}
+
+.navbar a:hover{
+  background:rgba(255,255,255,0.15);
+}
+
+.navbar .cta{
+  background:rgba(255,255,255,0.25);
+}
+
+
+.main{
+  padding-top:90px;
+  padding-bottom:80px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:calc(100vh - 150px);
+}
+
+
+.signup-box{
+  width:380px;
+  background:var(--card-bg);
+  padding:30px;
+  border-radius:14px;
+  box-shadow:var(--shadow);
+  text-align:center;
+  animation:fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:scale(0.95);}
+  to{opacity:1; transform:scale(1);}
+}
+
+.signup-box h2{
+  color:var(--accent);
+  font-size:24px;
+  margin-bottom:6px;
+}
+
+.subtitle{
+  margin-bottom:18px;
+  font-size:14px;
+  color:#3a5a46;
+}
+
+
+input{
+  width:100%;
+  padding:12px;
+  border-radius:10px;
+  border:1px solid #d9e7db;
+  outline:none;
+  margin-bottom:10px;
+  background:white;
+}
+
+input:focus{
+  border-color:var(--green);
+  box-shadow:0 3px 12px rgba(11,110,60,0.12);
+}
+
+
+.btn{
+  width:100%;
+  padding:12px;
+  background:var(--green);
+  color:white;
+  border:none;
+  font-size:16px;
+  border-radius:10px;
+  cursor:pointer;
+  margin-top:5px;
+  transition:0.2s;
+}
+
+.btn:hover{
+  background:#095b31;
+  transform:translateY(-3px);
+}
+
+
+.alt{
+  margin-top:12px;
+  font-size:14px;
+}
+
+.alt a{
+  color:var(--green);
+  font-weight:600;
+  text-decoration:none;
+}
+
+
+.footer{
+  position:fixed;
+  bottom:0; left:0;
+  width:100%;
+  height:60px;
+  background:var(--green);
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:14px;
+  box-shadow:0 -3px 10px rgba(0,0,0,0.1);
+}
+
+
+@media(max-width:450px){
+  .signup-box{
+    width:90%;
+    padding:20px;
+  }
+  .navbar{display:none;}
+}
